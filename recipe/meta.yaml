@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
-  sha256: f6cb893330a0d659a405435d9c843b24936203de9f89d7f7cbd48e277c4de8e7
+  sha256: f2af147ecea8ab08b035a1da3ad270dac664b0a4433cacfa36a2fd7e57e1e7c6
 
 build:
   entry_points:
