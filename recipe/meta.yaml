@@ -1,5 +1,5 @@
 {% set name = "scriptengine" %}
-{% set version = "0.14.4" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
-  sha256: f2af147ecea8ab08b035a1da3ad270dac664b0a4433cacfa36a2fd7e57e1e7c6
+  sha256: aa5418c70539946036d33ea54b98a26118aceba7b729b72971b31d8285216828
 
 build:
   entry_points:
@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
+    - setuptools >=60
   run:
-    - deepdiff >=6.2.2
-    - deepmerge
-    - jinja2
-    - python >=3.6
+    - python >=3.8
     - python-dateutil
     - pyyaml
+    - jinja2
+    - deepmerge
 
 test:
   imports:
@@ -46,4 +46,3 @@ about:
 extra:
   recipe-maintainers:
     - uwefladrich
-    - zklaus
