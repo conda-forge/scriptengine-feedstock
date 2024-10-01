@@ -19,12 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
     - deepdiff >=6.2.2
     - deepmerge
     - jinja2
-    - python >=3.6
+    - python >=3.8
     - python-dateutil
     - pyyaml
 
