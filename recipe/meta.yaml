@@ -20,6 +20,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools >=60
   run:
     - python >=3.8
     - python-dateutil
