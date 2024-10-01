@@ -21,12 +21,11 @@ requirements:
     - pip
     - python >=3.8
   run:
-    - deepdiff >=6.2.2
-    - deepmerge
-    - jinja2
     - python >=3.8
     - python-dateutil
     - pyyaml
+    - jinja2
+    - deepmerge
 
 test:
   imports:
