@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
   sha256: 006edfd47eeafe1f8a2fa93d1d8a4456ad349a860d2c6140cdae17625c74c930
 
 build:
