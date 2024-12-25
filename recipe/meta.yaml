@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
   sha256: 006edfd47eeafe1f8a2fa93d1d8a4456ad349a860d2c6140cdae17625c74c930
 
 build:
@@ -14,15 +14,15 @@ build:
     - se = scriptengine.cli.se:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=60
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil
     - pyyaml
     - jinja2
@@ -36,6 +36,7 @@ test:
     - se --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/uwefladrich/scriptengine
