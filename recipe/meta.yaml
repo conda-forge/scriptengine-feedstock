@@ -1,28 +1,28 @@
 {% set name = "scriptengine" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
-  sha256: 006edfd47eeafe1f8a2fa93d1d8a4456ad349a860d2c6140cdae17625c74c930
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
+  sha256: 78f7a41c7cfdd79d5488b5a186c5244b7cc02c0cd58c3a21b710786870b54468
 
 build:
   entry_points:
     - se = scriptengine.cli.se:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=60
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil
     - pyyaml
     - jinja2
@@ -35,6 +35,7 @@ test:
     - pip check
     - se --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
