@@ -1,5 +1,5 @@
 {% set name = "scriptengine" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/scriptengine-{{ version }}.tar.gz
-  sha256: f2e68a5d7e4712a5ffd45d6b2cda942369168a77d5de8d13922e9643f08a0857
+  sha256: 7d4731a850725e360e0485ba9f4b55e0e5d040fa2ba36f80fcb060ee7d1e0560
 
 build:
   entry_points:
